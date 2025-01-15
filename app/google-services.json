@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "631533183730",
+    "firebase_url": "https://chat---kotlin-76ded-default-rtdb.firebaseio.com",
+    "project_id": "chat---kotlin-76ded",
+    "storage_bucket": "chat---kotlin-76ded.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631533183730:android:faa64ea630c2ccc54d666b",
+        "android_client_info": {
+          "package_name": "com.example.chat_kotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBApCKXq9oJb_TBEIYyHslewhhF520K3DM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

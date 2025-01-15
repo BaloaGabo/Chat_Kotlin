@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Chat - Kotlin</string>
+
+    <string name="item_perfil">Perfil</string>
+    <string name="item_usuarios">Usuarios</string>
+    <string name="item_chat">Chats</string>
+
+    <string name="tv_Titulo">Titulo</string>
+
+    <string name="opcionEmail">Continuar con Email</string>
+    <string name="opcionGoogle">Continuar con Google</string>
+
+    <string name="txt_login">Login</string>
+    <string name="et_email">Correo Electronico</string>
+    <string name="et_password">Contraseña</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="txt_no_tienes_cuenta">¿No tienes una Cuenta?</string>
+    <string name="tv_registrarme">Registrarme</string>
+
+    <string name="txt_registro">Registro</string>
+    <string name="et_nombres">Nombres</string>
+    <string name="et_R_password">Repita la contraseña</string>
+    <string name="btn_registrar">Registrar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
