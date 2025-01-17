@@ -25,6 +25,18 @@
 
     <string name="btn_Cerrarsesion">Cerrar Sesion</string>
 
+    <string name="txt_nombres">Nombres: </string>
+    <string name="tv_nombres"> -- </string>
+    <string name="txt_email">Email: </string>
+    <string name="tv_email"> -- </string>
+    <string name="txt_proveedor">Proveedor: </string>
+    <string name="tv_proveedor"> -- </string>
+    <string name="txt_t_registro">Miembro desde: </string>
+    <string name="tv_t_registro"> -- </string>
+
+
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
