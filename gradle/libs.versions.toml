@@ -14,6 +14,7 @@ firebaseAuthKtx = "23.1.0"
 firebaseDatabaseKtx = "21.0.0"
 loginGoogleV="21.3.0"
 circleImageV="3.1.0"
+glideV="4.16.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,6 +29,7 @@ firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx",
 firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
 loginGoogle={group="com.google.android.gms",name = "play-services-auth", version.ref="loginGoogleV"}
 circleImage={group = "de.hdodenhof",name = "circleimageview", version.ref = "circleImageV"}
+glide={group="com.github.bumptech.glide", name ="glide", version.ref ="glideV"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
