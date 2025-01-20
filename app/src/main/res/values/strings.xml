@@ -23,6 +23,7 @@
     <string name="et_R_password">Repita la contraseña</string>
     <string name="btn_registrar">Registrar</string>
 
+    <string name="btn_ActualizarInfo">Actualizar</string>
     <string name="btn_Cerrarsesion">Cerrar Sesion</string>
 
     <string name="txt_nombres">Nombres: </string>
@@ -34,6 +35,8 @@
     <string name="txt_t_registro">Miembro desde: </string>
     <string name="tv_t_registro"> -- </string>
 
+    <string name="Txt_titulo_edit">Editar informacion</string>
+    <string name="btn_Actualizar">Actualizar</string>
 
 
 

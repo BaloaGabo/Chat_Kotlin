@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.chat_kotlin.Constantes
+import com.example.chat_kotlin.EditarInformacion
 import com.example.chat_kotlin.OpcionesLoginActivity
 import com.example.chat_kotlin.R
 import com.example.chat_kotlin.databinding.FragmentPerfilBinding
@@ -43,6 +44,10 @@ class FragmentPerfil : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         cargarInformacion()
+
+        binding.btnActualizarInfo.setOnClickListener{
+            startActivity(Intent(mContext, EditarInformacion::class.java))
+        }
 
         binding.btnCerrarsesion.setOnClickListener{
             firebaseAuth.signOut()
