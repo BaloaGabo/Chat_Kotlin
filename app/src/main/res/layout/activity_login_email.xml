@@ -54,6 +54,14 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/tv_recuperar_cuenta"
+        android:text="@string/tv_recuperar_cuenta"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_ingresar"
         android:text="@string/btn_ingresar"

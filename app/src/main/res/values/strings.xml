@@ -17,6 +17,7 @@
     <string name="btn_ingresar">Ingresar</string>
     <string name="txt_no_tienes_cuenta">¿No tienes una Cuenta?</string>
     <string name="tv_registrarme">Registrarme</string>
+    <string name="tv_recuperar_cuenta">Olvidé la contraseña <b> Recuperar </b></string>
 
     <string name="txt_registro">Registro</string>
     <string name="et_nombres">Nombres</string>
@@ -38,7 +39,9 @@
     <string name="Txt_titulo_edit">Editar informacion</string>
     <string name="btn_Actualizar">Actualizar</string>
 
-
+    <string name="Txt_olvide_pass">Olvidé password</string>
+    <string name="Txt_ingrese_email">Ingrese su email para el envio de las instrucciones de recuperacion</string>
+    <string name="btr_Enviar">Enviar</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
