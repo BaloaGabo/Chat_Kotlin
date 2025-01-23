@@ -3,12 +3,14 @@ package com.example.chat_kotlin.Fragmentos
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Email
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.example.chat_kotlin.CambiarPassword
 import com.example.chat_kotlin.Constantes
 import com.example.chat_kotlin.EditarInformacion
 import com.example.chat_kotlin.OpcionesLoginActivity
@@ -47,6 +49,10 @@ class FragmentPerfil : Fragment() {
 
         binding.btnActualizarInfo.setOnClickListener{
             startActivity(Intent(mContext, EditarInformacion::class.java))
+        }
+
+        binding.btnCambiarPass.setOnClickListener {
+            startActivity(Intent(mContext,CambiarPassword::class.java))
         }
 
         binding.btnCerrarsesion.setOnClickListener{
@@ -93,6 +99,10 @@ class FragmentPerfil : Fragment() {
                             "${e.message}",
                             Toast.LENGTH_SHORT
                         ).show()
+                    }
+
+                    if(proveedor == "Email"){
+                        binding.btnCambiarPass.visibility = View.VISIBLE
                     }
                 }
 

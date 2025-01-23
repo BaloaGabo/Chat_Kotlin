@@ -25,6 +25,7 @@
     <string name="btn_registrar">Registrar</string>
 
     <string name="btn_ActualizarInfo">Actualizar</string>
+    <string name="btn_CambiarPass">Cambiar contraseña</string>
     <string name="btn_Cerrarsesion">Cerrar Sesion</string>
 
     <string name="txt_nombres">Nombres: </string>
@@ -42,6 +43,13 @@
     <string name="Txt_olvide_pass">Olvidé password</string>
     <string name="Txt_ingrese_email">Ingrese su email para el envio de las instrucciones de recuperacion</string>
     <string name="btr_Enviar">Enviar</string>
+
+    <string name="Txt_cambiar_pass">Cambiar contraseña</string>
+
+    <string name="et_pass_actual">Contraseña actual</string>
+    <string name="et_pass_nueva">Nueva Contraseña</string>
+    <string name="et_r_pass_nueva">Repetir Nueva Contraseña</string>
+    <string name="btn_CambiarPassword">Cambiar</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
