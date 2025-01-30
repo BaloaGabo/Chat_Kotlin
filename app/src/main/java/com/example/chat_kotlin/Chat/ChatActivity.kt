@@ -10,7 +10,9 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.example.chat_kotlin.Adaptadores.AdaptadorChat
 import com.example.chat_kotlin.Constantes
+import com.example.chat_kotlin.Modelos.Chat
 import com.example.chat_kotlin.R
 import com.example.chat_kotlin.databinding.ActivityChatBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -67,6 +69,34 @@ class ChatActivity : AppCompatActivity() {
 
         cargarInfo()
 
+        cargarMensajes()
+
+    }
+
+    private fun cargarMensajes() {
+        val mensajesArrayList = ArrayList<Chat>()
+        val ref = FirebaseDatabase.getInstance().getReference("Chats")
+        ref.child(chatRuta)
+            .addValueEventListener(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    mensajesArrayList.clear()
+                    for (ds : DataSnapshot in snapshot.children){
+                        try {
+                            val chat = ds.getValue(Chat::class.java)
+                            mensajesArrayList.add(chat!!)
+                        }catch (e:Exception){
+
+                        }
+                    }
+
+                    val adaptadorChat = AdaptadorChat(this@ChatActivity, mensajesArrayList)
+                    binding.chatsRV.adapter = adaptadorChat
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+            })
     }
 
     private fun validarMensaje() {
@@ -181,7 +211,7 @@ class ChatActivity : AppCompatActivity() {
         hashMap["mensaje"] = "${mensaje}"
         hashMap["emisorUid"] = "${miUid}"
         hashMap["receptorUid"] = "$uid"
-        hashMap["tiempo"] = "$tiempo"
+        hashMap["tiempo"] = tiempo
 
         refChat.child(chatRuta)
             .child(keyId)

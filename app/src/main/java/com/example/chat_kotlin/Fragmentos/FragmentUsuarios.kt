@@ -9,8 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.chat_kotlin.AdaptadorUsuario
-import com.example.chat_kotlin.Usuario
+import com.example.chat_kotlin.Adaptadores.AdaptadorUsuario
+import com.example.chat_kotlin.Modelos.Usuario
 import com.example.chat_kotlin.databinding.FragmentUsuariosBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -96,7 +96,7 @@ class FragmentUsuarios : Fragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 (usuarioLista as ArrayList<Usuario>).clear()
                 for (ss in snapshot.children){
-                    val usuario : Usuario ?= ss.getValue(Usuario::class.java)
+                    val usuario : Usuario?= ss.getValue(Usuario::class.java)
                     if(!(usuario!!.uid).equals(firebaseUser)){
                         (usuarioLista as ArrayList<Usuario>).add(usuario)
 

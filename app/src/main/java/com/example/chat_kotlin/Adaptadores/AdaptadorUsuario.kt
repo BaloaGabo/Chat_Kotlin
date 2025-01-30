@@ -1,4 +1,4 @@
-package com.example.chat_kotlin
+package com.example.chat_kotlin.Adaptadores
 
 import android.content.Context
 import android.content.Intent
@@ -11,6 +11,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.chat_kotlin.Chat.ChatActivity
+import com.example.chat_kotlin.Modelos.Usuario
+import com.example.chat_kotlin.R
 
 class AdaptadorUsuario(
     context: Context,

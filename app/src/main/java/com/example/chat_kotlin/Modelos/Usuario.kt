@@ -1,4 +1,4 @@
-package com.example.chat_kotlin
+package com.example.chat_kotlin.Modelos
 
 class Usuario {
 
