@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.chat_kotlin.Adaptadores.AdaptadorChat
 import com.example.chat_kotlin.Constantes
@@ -91,6 +92,11 @@ class ChatActivity : AppCompatActivity() {
 
                     val adaptadorChat = AdaptadorChat(this@ChatActivity, mensajesArrayList)
                     binding.chatsRV.adapter = adaptadorChat
+
+                    binding.chatsRV.setHasFixedSize(true)
+                    var linearLayoutManager = LinearLayoutManager(this@ChatActivity)
+                    linearLayoutManager.stackFromEnd = true
+                    binding.chatsRV.layoutManager = linearLayoutManager
                 }
 
                 override fun onCancelled(error: DatabaseError) {
