@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragmentos.FragmentChats">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/buscarMCV"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Chats"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <EditText
+            android:id="@+id/et_buscar"
+            android:hint="@string/et_buscar"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatsRV"
+        tools:listitem="@layout/item_chats"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
