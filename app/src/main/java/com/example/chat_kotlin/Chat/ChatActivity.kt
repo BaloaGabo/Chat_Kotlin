@@ -123,6 +123,9 @@ class ChatActivity : AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val nombres = "${snapshot.child("nombres").value}"
                     val imagen = "${snapshot.child("imagen").value}"
+                    val estado = "${snapshot.child("estado").value}"
+
+                    binding.txtEstadoChat.text = estado
 
                     binding.txtNombreUsuario.text = nombres
 
@@ -236,5 +239,23 @@ class ChatActivity : AppCompatActivity() {
                 ).show()
 
             }
+    }
+
+    private fun actualizarEstado (estado : String){
+        val ref = FirebaseDatabase.getInstance().reference.child("Usuarios").child(firebaseAuth.uid!!)
+
+        val hashMap = HashMap<String, Any>()
+        hashMap["estado"] = estado
+        ref!!.updateChildren(hashMap)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        actualizarEstado("Online")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        actualizarEstado("Offline")
     }
 }

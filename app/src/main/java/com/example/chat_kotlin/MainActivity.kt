@@ -8,6 +8,7 @@ import com.example.chat_kotlin.Fragmentos.FragmentPerfil
 import com.example.chat_kotlin.Fragmentos.FragmentUsuarios
 import com.example.chat_kotlin.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
 
@@ -84,5 +85,23 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(binding.fragmentoFl.id,fragment,"Fragment Chats")
         fragmentTransaction.commit()
+    }
+
+    private fun actualizarEstado (estado : String){
+        val ref = FirebaseDatabase.getInstance().reference.child("Usuarios").child(firebaseAuth.uid!!)
+
+        val hashMap = HashMap<String, Any>()
+        hashMap["estado"] = estado
+        ref!!.updateChildren(hashMap)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        actualizarEstado("Online")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        actualizarEstado("Offline")
     }
 }

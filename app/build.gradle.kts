@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.circleImage)
     implementation(libs.glide)
     implementation(libs.firebase.storage.ktx)
+    implementation(libs.photoView)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

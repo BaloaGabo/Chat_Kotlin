@@ -58,11 +58,14 @@
     <string name="et_buscar_usuario">Buscar usuario</string>
 
     <string name="txt_nombre_usuario">Nombres</string>
+    <string name="txt_estado_chat">Online</string>
     <string name="Et_mensaje_chat">Escriba algo</string>
     <string name="Tv_tiempo_mensaje">dd/MM/yyyy hh:mmm</string>
 
     <string name="et_buscar">Buscar</string>
     <string name="tvFecha">dd/MM/yyyy</string>
+
+    <string name="BtnCerrarVisualizador">Cerrar</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -16,6 +16,7 @@ loginGoogleV="21.3.0"
 circleImageV="3.1.0"
 glideV="4.16.0"
 firebaseStorageKtx = "21.0.1"
+photoViewV = "2.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +33,7 @@ loginGoogle={group="com.google.android.gms",name = "play-services-auth", version
 circleImage={group = "de.hdodenhof",name = "circleimageview", version.ref = "circleImageV"}
 glide={group="com.github.bumptech.glide", name ="glide", version.ref ="glideV"}
 firebase-storage-ktx = { group = "com.google.firebase", name = "firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
+photoView={group="com.github.chrisbanes", name="PhotoView", version.ref="photoViewV"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
